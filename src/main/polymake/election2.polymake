@@ -1,0 +1,20 @@
+use application 'polytope';
+
+my $inequalities = [
+  [2, -1, 0, 0, 0],
+  [6, 0, -1, 0, 0],
+  [6, 0, 0, -1, 0],
+  [10, 0, 0, 0, -1],
+  [0, 1, 0, 0, 0],
+  [0, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0],
+  [0, 0, 0, 0, 1]
+];
+
+my $equations = [
+  [-94, 17, 8, 4, 2]
+];
+
+my $e = new Polytope(INEQUALITIES=>$inequalities,EQUATIONS=>$equations);
+
+print $e->LATTICE_POINTS;
